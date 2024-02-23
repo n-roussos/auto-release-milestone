@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/sdk:7.0.0
+FROM mcr.microsoft.com/dotnet/sdk:7.0
 
 
 LABEL "com.github.actions.name" = "Auto Release Milestone"
