@@ -1,11 +1,11 @@
-# Set the base image to use for subsequent instructions
-FROM alpine:3.19
+FROM mcr.microsoft.com/dotnet/core/sdk:latest
 
-# Set the working directory inside the container
-WORKDIR /usr/src
+LABEL "com.github.actions.name" = "Auto Release Milestone"
+LABEL "com.github.actions.description" = "Drafts a GitHub release based on a nealy created milestone."
 
-# Copy any source file(s) required for the action
-COPY entrypoint.sh .
+LABEL verions="0.1.0"
+LABEL repository="https://github.com/n-roussos/auto-release-milestone"
+LABEL maintainer="Nick Roussos"
 
-# Configure the container to be run as an executable
-ENTRYPOINT ["/usr/src/entrypoint.sh"]
+COPY entrypoint.sh /
+ENTRYPOINT [ "./entrypoint.sh" ]
