@@ -9,7 +9,7 @@ LABEL maintainer="Nick Roussos"
 
 # JQ toolkit to parse event JSON file
 RUN apt-get update && apt-get install -y jq
-RUN dotnet-tool install -g GitReleaseManager.Tool
+RUN dotnet tool install -g GitReleaseManager.Tool
 
 # Update $PATH env variable
 ENV PATH /root/.dotnet/tools:$PATH
