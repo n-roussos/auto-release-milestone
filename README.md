@@ -32,7 +32,7 @@ jobs:
     steps:
       - name: Create a release draft for a milestone
         id: create-release-milestone
-        uses: ecampidoglio/auto-release-milestone@v1
+        uses: n-roussos/auto-release-milestone@v1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
       - name: Print the URL of the release draft
